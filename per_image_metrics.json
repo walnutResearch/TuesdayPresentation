@@ -1,0 +1,42 @@
+[
+  {
+    "image": "DJI_20250820112813_0489_D_crop_001.png",
+    "num_preds": 63,
+    "num_gts": 62,
+    "TP": 19,
+    "FP": 44,
+    "FN": 43
+  },
+  {
+    "image": "DJI_20250820112813_0489_D_crop_003.png",
+    "num_preds": 16,
+    "num_gts": 27,
+    "TP": 13,
+    "FP": 3,
+    "FN": 14
+  },
+  {
+    "image": "DJI_20250820112813_0489_D_crop_006.png",
+    "num_preds": 2,
+    "num_gts": 8,
+    "TP": 1,
+    "FP": 1,
+    "FN": 7
+  },
+  {
+    "image": "DJI_20250820113121_0652_D_crop_006.png",
+    "num_preds": 39,
+    "num_gts": 44,
+    "TP": 22,
+    "FP": 17,
+    "FN": 22
+  },
+  {
+    "image": "DJI_20250820113131_0661_D_crop_005.png",
+    "num_preds": 22,
+    "num_gts": 17,
+    "TP": 5,
+    "FP": 17,
+    "FN": 12
+  }
+]

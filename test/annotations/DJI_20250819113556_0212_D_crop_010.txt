@@ -1,0 +1,19 @@
+# Walnut center annotations (x, y) coordinates
+# Image: DJI_20250819113556_0212_D_crop_010.png
+# Image size: 353x391
+# Total walnuts: 14
+# Format: x y
+89 230
+94 223
+177 76
+185 80
+168 82
+229 66
+223 207
+229 198
+242 277
+237 269
+167 296
+120 337
+122 348
+209 362

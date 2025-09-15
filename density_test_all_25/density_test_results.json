@@ -1,0 +1,200 @@
+{
+  "metrics": {
+    "MAE": 25.659220886230468,
+    "RMSE": 32.67265779078441,
+    "MSE": 1067.5025671137055,
+    "MAPE": 162.15468027026375,
+    "SMAPE": 49.13800889726054,
+    "R2": 0.06947904976239272,
+    "Pearson": 0.6713596760741574,
+    "Pred_Mean": 56.28544494628906,
+    "True_Mean": 57.48,
+    "Pred_Std": 1.860083498933216,
+    "True_Std": 33.87048272463799
+  },
+  "per_image_results": [
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_001.png",
+      "pred_count": 58.331565856933594,
+      "true_count": 41.0,
+      "error": 17.331565856933594,
+      "relative_error": 42.27211184617949
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_002.png",
+      "pred_count": 56.97389221191406,
+      "true_count": 93.0,
+      "error": 36.02610778808594,
+      "relative_error": 38.73775030976982
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_003.png",
+      "pred_count": 58.375648498535156,
+      "true_count": 52.0,
+      "error": 6.375648498535156,
+      "relative_error": 12.260862497182993
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_004.png",
+      "pred_count": 55.55485916137695,
+      "true_count": 16.0,
+      "error": 39.55485916137695,
+      "relative_error": 247.21786975860596
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_005.png",
+      "pred_count": 58.93101501464844,
+      "true_count": 113.0,
+      "error": 54.06898498535156,
+      "relative_error": 47.84865927907218
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_006.png",
+      "pred_count": 57.899314880371094,
+      "true_count": 75.0,
+      "error": 17.100685119628906,
+      "relative_error": 22.800913492838543
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_007.png",
+      "pred_count": 57.24131774902344,
+      "true_count": 71.0,
+      "error": 13.758682250976562,
+      "relative_error": 19.378425705600794
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_008.png",
+      "pred_count": 55.74623107910156,
+      "true_count": 41.0,
+      "error": 14.746231079101562,
+      "relative_error": 35.96641726610137
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_009.png",
+      "pred_count": 54.75770568847656,
+      "true_count": 56.0,
+      "error": 1.2422943115234375,
+      "relative_error": 2.2183826991489957
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_010.png",
+      "pred_count": 54.78954315185547,
+      "true_count": 14.0,
+      "error": 40.78954315185547,
+      "relative_error": 291.3538796561105
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_011.png",
+      "pred_count": 54.25221252441406,
+      "true_count": 37.0,
+      "error": 17.252212524414062,
+      "relative_error": 46.6276014173353
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_012.png",
+      "pred_count": 56.588314056396484,
+      "true_count": 51.0,
+      "error": 5.588314056396484,
+      "relative_error": 10.957478541953892
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_013.png",
+      "pred_count": 53.140541076660156,
+      "true_count": 26.0,
+      "error": 27.140541076660156,
+      "relative_error": 104.38669644869292
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_014.png",
+      "pred_count": 52.20778274536133,
+      "true_count": 25.0,
+      "error": 27.207782745361328,
+      "relative_error": 108.83113098144533
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_015.png",
+      "pred_count": 54.02562713623047,
+      "true_count": 26.0,
+      "error": 28.02562713623047,
+      "relative_error": 107.79087360088641
+    },
+    {
+      "image_path": "test/DJI_20250819113556_0212_D_crop_016.png",
+      "pred_count": 54.16441345214844,
+      "true_count": 69.0,
+      "error": 14.835586547851562,
+      "relative_error": 21.50085006935009
+    },
+    {
+      "image_path": "test/DJI_20250819113702_0277_D_crop_001.png",
+      "pred_count": 59.258888244628906,
+      "true_count": 141.0,
+      "error": 81.7411117553711,
+      "relative_error": 57.972419684660345
+    },
+    {
+      "image_path": "test/DJI_20250819113702_0277_D_crop_002.png",
+      "pred_count": 58.194923400878906,
+      "true_count": 126.0,
+      "error": 67.8050765991211,
+      "relative_error": 53.81355285644531
+    },
+    {
+      "image_path": "test/DJI_20250819113702_0277_D_crop_003.png",
+      "pred_count": 56.62477111816406,
+      "true_count": 71.0,
+      "error": 14.375228881835938,
+      "relative_error": 20.246801242022446
+    },
+    {
+      "image_path": "test/DJI_20250819113702_0277_D_crop_004.png",
+      "pred_count": 55.83599090576172,
+      "true_count": 74.0,
+      "error": 18.16400909423828,
+      "relative_error": 24.54595823545714
+    },
+    {
+      "image_path": "test/DJI_20250819113702_0277_D_crop_005.png",
+      "pred_count": 56.86829376220703,
+      "true_count": 52.0,
+      "error": 4.868293762207031,
+      "relative_error": 9.362103388859676
+    },
+    {
+      "image_path": "test/DJI_20250819113702_0277_D_crop_006.png",
+      "pred_count": 57.7324333190918,
+      "true_count": 71.0,
+      "error": 13.267566680908203,
+      "relative_error": 18.686713635081976
+    },
+    {
+      "image_path": "test/DJI_20250819113702_0277_D_crop_007.png",
+      "pred_count": 57.713134765625,
+      "true_count": 61.0,
+      "error": 3.286865234375,
+      "relative_error": 5.388303662909836
+    },
+    {
+      "image_path": "test/DJI_20250819113702_0277_D_crop_008.png",
+      "pred_count": 54.59959411621094,
+      "true_count": 2.0,
+      "error": 52.59959411621094,
+      "relative_error": 2629.979705810547
+    },
+    {
+      "image_path": "test/DJI_20250819113702_0277_D_crop_009.png",
+      "pred_count": 57.32810974121094,
+      "true_count": 33.0,
+      "error": 24.328109741210938,
+      "relative_error": 73.72154467033617
+    }
+  ],
+  "model_info": {
+    "model_path": "models/density_model.pth",
+    "input_channels": 6,
+    "hidden_dim": 32,
+    "dropout_rate": 0.0,
+    "no_bn": true,
+    "total_parameters": 45475
+  }
+}

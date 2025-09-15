@@ -1,0 +1,13 @@
+{
+  "images": 25,
+  "TP": 414,
+  "FP": 596,
+  "FN": 1023,
+  "precision": 0.40990098969316735,
+  "recall": 0.2881002085677799,
+  "f1": 0.3383730335433475,
+  "match_distance_px": 12.0,
+  "patch_size": 16,
+  "stride": 8,
+  "threshold": 0.2
+}
