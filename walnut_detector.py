@@ -8,6 +8,22 @@ Applies the trained model to full images to detect and count walnuts.
 
 Author: Walnut Counting Project
 Date: 2025
+
+BEST MODEL CONFIGURATION (Threshold 0.6):
+========================================
+Model: models_new/walnut_classifier.pth
+Threshold: 0.6
+Patch Size: 32
+Stride: 16
+Clustering: True (DBSCAN)
+
+Performance Metrics:
+- Count Accuracy: 97.13% (501 predicted vs 487 ground truth, error: 14)
+- Precision: 52.50%
+- Recall: 54.00%
+- F1 Score: 53.24%
+
+This configuration provides the best balance between count accuracy and precision.
 """
 
 import os
@@ -343,7 +359,10 @@ def main():
     
     # Process directory of images
     elif args.image_dir:
-        image_files = list(Path(args.image_dir).glob("*.png")) + list(Path(args.image_dir).glob("*.jpg"))
+        image_files = (list(Path(args.image_dir).glob("*.png")) + 
+                      list(Path(args.image_dir).glob("*.jpg")) +
+                      list(Path(args.image_dir).glob("*.JPG")) +
+                      list(Path(args.image_dir).glob("*.PNG")))
         print(f"Processing {len(image_files)} images...")
         
         all_results = []
@@ -355,13 +374,16 @@ def main():
                 print(f"Error processing {image_file}: {e}")
         
         # Summary statistics
-        total_walnuts = sum(r['num_walnuts'] for r in all_results)
-        mean_confidence = np.mean([r['mean_confidence'] for r in all_results])
-        
-        print(f"\n📊 Summary:")
-        print(f"Total walnuts detected: {total_walnuts}")
-        print(f"Average walnuts per image: {total_walnuts / len(all_results):.1f}")
-        print(f"Mean confidence: {mean_confidence:.3f}")
+        if len(all_results) > 0:
+            total_walnuts = sum(r['num_walnuts'] for r in all_results)
+            mean_confidence = np.mean([r['mean_confidence'] for r in all_results])
+            
+            print(f"\n📊 Summary:")
+            print(f"Total walnuts detected: {total_walnuts}")
+            print(f"Average walnuts per image: {total_walnuts / len(all_results):.1f}")
+            print(f"Mean confidence: {mean_confidence:.3f}")
+        else:
+            print(f"\n⚠️  No images processed successfully")
         
         # Save results
         if args.output_dir:

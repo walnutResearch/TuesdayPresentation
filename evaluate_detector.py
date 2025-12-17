@@ -11,6 +11,23 @@ Evaluate Walnut Detector on Annotated Test Set
 
 Author: Walnut Counting Project
 Date: 2025
+
+BEST MODEL CONFIGURATION (Threshold 0.6):
+========================================
+Model: models_new/walnut_classifier.pth
+Threshold: 0.6
+Patch Size: 32
+Stride: 16
+Match Distance: 20.0
+Clustering: True
+
+Performance Metrics:
+- Count Accuracy: 97.13% (501 predicted vs 487 ground truth, error: 14)
+- Precision: 52.50%
+- Recall: 54.00%
+- F1 Score: 53.24%
+
+This configuration provides the best balance between count accuracy and precision.
 """
 
 import os
@@ -176,7 +193,8 @@ def evaluate(
         confidence_threshold=threshold,
     )
 
-    image_paths = sorted(list(Path(images_dir).glob("*.png")) + list(Path(images_dir).glob("*.jpg")))
+    image_paths = sorted(list(Path(images_dir).glob("*.png")) + list(Path(images_dir).glob("*.jpg")) + 
+                        list(Path(images_dir).glob("*.JPG")) + list(Path(images_dir).glob("*.PNG")))
     print(f"Found {len(image_paths)} test images")
 
     per_image = []
@@ -283,7 +301,12 @@ def main():
 
     args = parser.parse_args()
 
-    images_dir = args.test_dir  # Images are directly in test directory
+    # Check if images are in a subdirectory
+    images_subdir = os.path.join(args.test_dir, "images")
+    if os.path.exists(images_subdir) and len(list(Path(images_subdir).glob("*.jpg")) + list(Path(images_subdir).glob("*.JPG")) + list(Path(images_subdir).glob("*.png"))) > 0:
+        images_dir = images_subdir
+    else:
+        images_dir = args.test_dir  # Images are directly in test directory
     labels_dir = os.path.join(args.test_dir, "annotations")
 
     evaluate(
