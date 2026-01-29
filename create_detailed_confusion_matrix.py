@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """
-Create Detailed Confusion Matrix for Binary Classifier
-=====================================================
+Create a detailed confusion matrix from detector results using finer count bins (e.g. 0, 1-5, 6-15, ...).
+Reads per_image_results (pred_count, true_count) from a results JSON and saves a confusion matrix plot.
 
-Creates a more detailed confusion matrix by analyzing individual patch classifications.
+How to run:
+  python create_detailed_confusion_matrix.py
+
+Results file and output_dir are set inside create_detailed_confusion_matrix(); edit as needed.
 """
 
 import json

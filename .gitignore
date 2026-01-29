@@ -1,0 +1,58 @@
+# Image files (all common extensions)
+*.png
+*.PNG
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.gif
+*.GIF
+*.bmp
+*.BMP
+*.tiff
+*.tif
+*.TIFF
+*.TIF
+*.webp
+*.WEBP
+*.ico
+
+# Image / asset folders
+negative/
+positive/
+binary_test_32x16_0.1/
+density_test_all_25/
+detector_direct_results/
+detector_eval_model1/
+detector_eval_precision_model/
+detector_eval_precision_th05/
+detector_eval_precision_th07/
+detector_eval_precision_th08/
+detector_evaluation_results/
+detector_evaluation_results_new/
+detector_evaluation_results_new_th06/
+detector_evaluation_results_new_th07/
+detector_evaluation_results_new_th08/
+report_results/
+test/
+test_single_image/
+threshold_evaluations/
+Data_per_image and Threshold/
+
+# Drone / camera image directories (DJI_* pattern)
+DJI_*/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.Python
+*.so
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db

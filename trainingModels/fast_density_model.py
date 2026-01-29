@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 """
-Fast Density Estimation Model for Walnut Counting
-Optimized for speed with minimal complexity
+Fast density estimation model: lighter CNN for walnut density prediction, optimized for speed.
+Same role as synthetic_pipeline_code/fast_density_model.py. Defines ModelConfig, MultiChannelTransform, training.
+
+How to run (training):
+  python fast_density_model.py --synthetic_data path/to/data [--output path] [--epochs 20]
+
+Use as module: from fast_density_model import ModelConfig, MultiChannelTransform, ...
 """
 
 import os

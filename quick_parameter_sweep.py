@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """
-Quick Parameter Sweep for Binary Classifier
-==========================================
+Run a quick parameter sweep: call test_binary_classifier.py with several patch_size, stride, and threshold
+combinations, parse MAE/RMSE/R² from stdout, and print or save a summary. Used to find good detector settings.
 
-Tests key parameter combinations for binary classifier optimization.
+How to run:
+  python quick_parameter_sweep.py
+
+Model path, test dir, and parameter lists are set inside the script (subprocess calls test_binary_classifier.py).
 """
 
 import subprocess

@@ -1,0 +1,306 @@
+====================================================================================================
+TESTING ALL THRESHOLDS (0.1 to 0.9)
+====================================================================================================
+Model: models_new/walnut_classifier.pth
+Test Images: /Users/kalpit/TuesdayPresentation/Walnut_Research/test
+Thresholds: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+
+📊 Calculating ground truth total...
+✅ Total Ground Truth: 0 walnuts
+
+
+====================================================================================================
+Testing Threshold: 0.1
+====================================================================================================
+🖥️  Using device: mps
+📦 Loaded model from models_new/walnut_classifier.pth
+📊 Model accuracy: 97.19%
+Found 0 test images
+Evaluating: 0it [00:00, ?it/s]Evaluating: 0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/Users/kalpit/TuesdayPresentation/test_all_thresholds.py", line 86, in main
+    total_predicted = sum(item['num_preds'] for item in results['per_image'])
+                                                        ~~~~~~~^^^^^^^^^^^^^
+KeyError: 'per_image'
+
+Evaluation Summary:
+{
+  "images": 0,
+  "TP": 0,
+  "FP": 0,
+  "FN": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "match_distance_px": 20.0,
+  "patch_size": 32,
+  "stride": 16,
+  "threshold": 0.1
+}
+Saved detailed results to /Users/kalpit/TuesdayPresentation/threshold_evaluations/th0.1
+❌ Error testing threshold 0.1: 'per_image'
+
+====================================================================================================
+Testing Threshold: 0.2
+====================================================================================================
+🖥️  Using device: mps
+📦 Loaded model from models_new/walnut_classifier.pth
+📊 Model accuracy: 97.19%
+Found 0 test images
+Evaluating: 0it [00:00, ?it/s]Evaluating: 0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/Users/kalpit/TuesdayPresentation/test_all_thresholds.py", line 86, in main
+    total_predicted = sum(item['num_preds'] for item in results['per_image'])
+                                                        ~~~~~~~^^^^^^^^^^^^^
+KeyError: 'per_image'
+
+Evaluation Summary:
+{
+  "images": 0,
+  "TP": 0,
+  "FP": 0,
+  "FN": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "match_distance_px": 20.0,
+  "patch_size": 32,
+  "stride": 16,
+  "threshold": 0.2
+}
+Saved detailed results to /Users/kalpit/TuesdayPresentation/threshold_evaluations/th0.2
+❌ Error testing threshold 0.2: 'per_image'
+
+====================================================================================================
+Testing Threshold: 0.3
+====================================================================================================
+🖥️  Using device: mps
+📦 Loaded model from models_new/walnut_classifier.pth
+📊 Model accuracy: 97.19%
+Found 0 test images
+Evaluating: 0it [00:00, ?it/s]Evaluating: 0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/Users/kalpit/TuesdayPresentation/test_all_thresholds.py", line 86, in main
+    total_predicted = sum(item['num_preds'] for item in results['per_image'])
+                                                        ~~~~~~~^^^^^^^^^^^^^
+KeyError: 'per_image'
+
+Evaluation Summary:
+{
+  "images": 0,
+  "TP": 0,
+  "FP": 0,
+  "FN": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "match_distance_px": 20.0,
+  "patch_size": 32,
+  "stride": 16,
+  "threshold": 0.3
+}
+Saved detailed results to /Users/kalpit/TuesdayPresentation/threshold_evaluations/th0.3
+❌ Error testing threshold 0.3: 'per_image'
+
+====================================================================================================
+Testing Threshold: 0.4
+====================================================================================================
+🖥️  Using device: mps
+📦 Loaded model from models_new/walnut_classifier.pth
+📊 Model accuracy: 97.19%
+Found 0 test images
+Evaluating: 0it [00:00, ?it/s]Evaluating: 0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/Users/kalpit/TuesdayPresentation/test_all_thresholds.py", line 86, in main
+    total_predicted = sum(item['num_preds'] for item in results['per_image'])
+                                                        ~~~~~~~^^^^^^^^^^^^^
+KeyError: 'per_image'
+
+Evaluation Summary:
+{
+  "images": 0,
+  "TP": 0,
+  "FP": 0,
+  "FN": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "match_distance_px": 20.0,
+  "patch_size": 32,
+  "stride": 16,
+  "threshold": 0.4
+}
+Saved detailed results to /Users/kalpit/TuesdayPresentation/threshold_evaluations/th0.4
+❌ Error testing threshold 0.4: 'per_image'
+
+====================================================================================================
+Testing Threshold: 0.5
+====================================================================================================
+🖥️  Using device: mps
+📦 Loaded model from models_new/walnut_classifier.pth
+📊 Model accuracy: 97.19%
+Found 0 test images
+Evaluating: 0it [00:00, ?it/s]Evaluating: 0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/Users/kalpit/TuesdayPresentation/test_all_thresholds.py", line 86, in main
+    total_predicted = sum(item['num_preds'] for item in results['per_image'])
+                                                        ~~~~~~~^^^^^^^^^^^^^
+KeyError: 'per_image'
+
+Evaluation Summary:
+{
+  "images": 0,
+  "TP": 0,
+  "FP": 0,
+  "FN": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "match_distance_px": 20.0,
+  "patch_size": 32,
+  "stride": 16,
+  "threshold": 0.5
+}
+Saved detailed results to /Users/kalpit/TuesdayPresentation/threshold_evaluations/th0.5
+❌ Error testing threshold 0.5: 'per_image'
+
+====================================================================================================
+Testing Threshold: 0.6
+====================================================================================================
+🖥️  Using device: mps
+📦 Loaded model from models_new/walnut_classifier.pth
+📊 Model accuracy: 97.19%
+Found 0 test images
+Evaluating: 0it [00:00, ?it/s]Evaluating: 0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/Users/kalpit/TuesdayPresentation/test_all_thresholds.py", line 86, in main
+    total_predicted = sum(item['num_preds'] for item in results['per_image'])
+                                                        ~~~~~~~^^^^^^^^^^^^^
+KeyError: 'per_image'
+
+Evaluation Summary:
+{
+  "images": 0,
+  "TP": 0,
+  "FP": 0,
+  "FN": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "match_distance_px": 20.0,
+  "patch_size": 32,
+  "stride": 16,
+  "threshold": 0.6
+}
+Saved detailed results to /Users/kalpit/TuesdayPresentation/threshold_evaluations/th0.6
+❌ Error testing threshold 0.6: 'per_image'
+
+====================================================================================================
+Testing Threshold: 0.7
+====================================================================================================
+🖥️  Using device: mps
+📦 Loaded model from models_new/walnut_classifier.pth
+📊 Model accuracy: 97.19%
+Found 0 test images
+Evaluating: 0it [00:00, ?it/s]Evaluating: 0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/Users/kalpit/TuesdayPresentation/test_all_thresholds.py", line 86, in main
+    total_predicted = sum(item['num_preds'] for item in results['per_image'])
+                                                        ~~~~~~~^^^^^^^^^^^^^
+KeyError: 'per_image'
+
+Evaluation Summary:
+{
+  "images": 0,
+  "TP": 0,
+  "FP": 0,
+  "FN": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "match_distance_px": 20.0,
+  "patch_size": 32,
+  "stride": 16,
+  "threshold": 0.7
+}
+Saved detailed results to /Users/kalpit/TuesdayPresentation/threshold_evaluations/th0.7
+❌ Error testing threshold 0.7: 'per_image'
+
+====================================================================================================
+Testing Threshold: 0.8
+====================================================================================================
+🖥️  Using device: mps
+📦 Loaded model from models_new/walnut_classifier.pth
+📊 Model accuracy: 97.19%
+Found 0 test images
+Evaluating: 0it [00:00, ?it/s]Evaluating: 0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/Users/kalpit/TuesdayPresentation/test_all_thresholds.py", line 86, in main
+    total_predicted = sum(item['num_preds'] for item in results['per_image'])
+                                                        ~~~~~~~^^^^^^^^^^^^^
+KeyError: 'per_image'
+
+Evaluation Summary:
+{
+  "images": 0,
+  "TP": 0,
+  "FP": 0,
+  "FN": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "match_distance_px": 20.0,
+  "patch_size": 32,
+  "stride": 16,
+  "threshold": 0.8
+}
+Saved detailed results to /Users/kalpit/TuesdayPresentation/threshold_evaluations/th0.8
+❌ Error testing threshold 0.8: 'per_image'
+
+====================================================================================================
+Testing Threshold: 0.9
+====================================================================================================
+🖥️  Using device: mps
+📦 Loaded model from models_new/walnut_classifier.pth
+📊 Model accuracy: 97.19%
+Found 0 test images
+Evaluating: 0it [00:00, ?it/s]Evaluating: 0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/Users/kalpit/TuesdayPresentation/test_all_thresholds.py", line 86, in main
+    total_predicted = sum(item['num_preds'] for item in results['per_image'])
+                                                        ~~~~~~~^^^^^^^^^^^^^
+KeyError: 'per_image'
+
+Evaluation Summary:
+{
+  "images": 0,
+  "TP": 0,
+  "FP": 0,
+  "FN": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "match_distance_px": 20.0,
+  "patch_size": 32,
+  "stride": 16,
+  "threshold": 0.9
+}
+Saved detailed results to /Users/kalpit/TuesdayPresentation/threshold_evaluations/th0.9
+❌ Error testing threshold 0.9: 'per_image'
+
+====================================================================================================
+SUMMARY: PRECISION & COUNT ACCURACY BY THRESHOLD
+====================================================================================================
+Threshold    Predicted    Count Acc %     Precision %     Recall %        F1 %            TP       FP       FN      
+----------------------------------------------------------------------------------------------------
+
+====================================================================================================
+BEST RESULTS
+====================================================================================================
+Traceback (most recent call last):
+  File "/Users/kalpit/TuesdayPresentation/test_all_thresholds.py", line 179, in <module>
+    main()
+    ~~~~^^
+  File "/Users/kalpit/TuesdayPresentation/test_all_thresholds.py", line 164, in main
+    best_precision = max(all_results.values(), key=lambda x: x['precision'])
+ValueError: max() iterable argument is empty

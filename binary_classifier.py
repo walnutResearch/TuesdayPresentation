@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-Binary Walnut Classifier
-========================
+Train the binary walnut classifier (CNN) on positive/negative 32x32 patches. Reads from positive/ and negative/
+directories, uses data augmentation, and saves the best model (e.g. walnut_classifier.pth) and training metrics.
 
-CNN model for binary classification of walnut vs background patches.
-Optimized for MPS/Apple Silicon with efficient training and inference.
+How to run:
+  python binary_classifier.py --positive_dir positive --negative_dir negative [--output_dir models] [--epochs 50]
 
-Author: Walnut Counting Project
-Date: 2025
+Use --help for all options. Optimized for MPS/Apple Silicon.
 """
 
 import os
@@ -221,6 +220,7 @@ class BinaryTrainer:
         self.train_accuracies = []
         self.val_accuracies = []
         self.best_val_acc = 0.0
+        self.best_precision = 0.0
     
     def train_epoch(self, train_loader: DataLoader) -> Tuple[float, float]:
         """Train for one epoch"""
@@ -329,19 +329,28 @@ class BinaryTrainer:
             print(f"F1: {metrics['f1']:.3f}, AUC: {metrics['auc']:.3f}")
             print(f"Learning Rate: {self.optimizer.param_groups[0]['lr']:.6f}")
             
-            # Save best model
+            # Track best validation accuracy
             if val_acc > self.best_val_acc:
                 self.best_val_acc = val_acc
+            
+            # Save best model based on precision
+            if metrics['precision'] > self.best_precision:
+                self.best_precision = metrics['precision']
                 torch.save({
                     'model_state_dict': self.model.state_dict(),
                     'optimizer_state_dict': self.optimizer.state_dict(),
                     'epoch': epoch,
                     'val_acc': val_acc,
+                    'precision': metrics['precision'],
+                    'recall': metrics['recall'],
+                    'f1': metrics['f1'],
                     'metrics': metrics
                 }, save_path)
-                print(f"💾 Saved best model (Val Acc: {val_acc:.2f}%)")
+                print(f"💾 Saved best model (Precision: {metrics['precision']:.3f}, Val Acc: {val_acc:.2f}%)")
         
-        print(f"\n✅ Training completed! Best validation accuracy: {self.best_val_acc:.2f}%")
+        print(f"\n✅ Training completed!")
+        print(f"   Best validation accuracy: {self.best_val_acc:.2f}%")
+        print(f"   Best precision: {self.best_precision:.3f}")
         return self.train_losses, self.val_losses, self.train_accuracies, self.val_accuracies
 
 def create_data_loaders(dataset_dir: str, batch_size: int = 32, 
@@ -478,8 +487,8 @@ def main():
     # Create trainer
     trainer = BinaryTrainer(model, device, args.learning_rate)
     
-    # Train model
-    model_path = os.path.join(args.output_dir, "walnut_classifier.pth")
+    # Train model (saves model with best precision)
+    model_path = os.path.join(args.output_dir, "walnut_classifier_best_precision.pth")
     train_losses, val_losses, train_accs, val_accs = trainer.train(
         train_loader, val_loader, args.epochs, model_path
     )
@@ -494,7 +503,8 @@ def main():
         'val_losses': val_losses,
         'train_accuracies': train_accs,
         'val_accuracies': val_accs,
-        'best_val_acc': trainer.best_val_acc
+        'best_val_acc': trainer.best_val_acc,
+        'best_precision': trainer.best_precision
     }
     
     history_path = os.path.join(args.output_dir, "training_history.json")

@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-Parameter Sweep for Binary Classifier
-====================================
+Run a parameter sweep for the binary classifier: run test_binary_classifier.py for multiple patch_size,
+stride, and threshold combinations, collect MAE/RMSE/R² and optional outputs, and save results to JSON.
 
-Tests different combinations of patch size, stride, and threshold
-to find optimal parameters for walnut counting.
+How to run:
+  python parameter_sweep_binary.py
 
-Author: Walnut Counting Project
-Date: 2025
+Model path, test dir, parameter grid, and output path are set inside the script.
 """
 
 import subprocess
