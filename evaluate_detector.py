@@ -1,33 +1,13 @@
 #!/usr/bin/env python3
 """
-Evaluate Walnut Detector on Annotated Test Set
-=============================================
+Evaluate the walnut detector on an annotated test set: run sliding-window detection on each test image,
+load GT center-point annotations, match predictions to GT with a distance threshold, and compute TP/FP/FN,
+precision, recall, F1. Saves per_image_metrics.json and summary.json (and optional confusion plot).
 
-- Runs sliding-window detector on each test image
-- Loads GT center-point annotations
-- Matches predictions to GT with a distance threshold
-- Computes TP / FP / FN, precision, recall, F1
-- Saves per-image metrics and an overall report
+How to run:
+  python evaluate_detector.py --model_path models_new/walnut_classifier.pth --images_dir path/to/images --labels_dir path/to/annotations --output_dir path/to/output [--threshold 0.6] [--patch_size 32] [--stride 16] [--match_distance 20]
 
-Author: Walnut Counting Project
-Date: 2025
-
-BEST MODEL CONFIGURATION (Threshold 0.6):
-========================================
-Model: models_new/walnut_classifier.pth
-Threshold: 0.6
-Patch Size: 32
-Stride: 16
-Match Distance: 20.0
-Clustering: True
-
-Performance Metrics:
-- Count Accuracy: 97.13% (501 predicted vs 487 ground truth, error: 14)
-- Precision: 52.50%
-- Recall: 54.00%
-- F1 Score: 53.24%
-
-This configuration provides the best balance between count accuracy and precision.
+Use --help for all options.
 """
 
 import os
@@ -301,9 +281,11 @@ def main():
 
     args = parser.parse_args()
 
-    # Check if images are in a subdirectory
+    # Check if images are in a subdirectory (must match extensions used in evaluate())
     images_subdir = os.path.join(args.test_dir, "images")
-    if os.path.exists(images_subdir) and len(list(Path(images_subdir).glob("*.jpg")) + list(Path(images_subdir).glob("*.JPG")) + list(Path(images_subdir).glob("*.png"))) > 0:
+    subdir_images = (list(Path(images_subdir).glob("*.png")) + list(Path(images_subdir).glob("*.jpg")) +
+                     list(Path(images_subdir).glob("*.JPG")) + list(Path(images_subdir).glob("*.PNG")))
+    if os.path.exists(images_subdir) and len(subdir_images) > 0:
         images_dir = images_subdir
     else:
         images_dir = args.test_dir  # Images are directly in test directory

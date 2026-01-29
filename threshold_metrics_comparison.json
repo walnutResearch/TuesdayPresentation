@@ -1,0 +1,359 @@
+{
+  "summary": {
+    "total_evaluations": 12,
+    "datasets": {
+      "glenn": {
+        "ground_truth_total": 1782,
+        "description": "Glenn dataset evaluations"
+      },
+      "walnut_research": {
+        "ground_truth_total": 487,
+        "description": "Walnut Research test dataset"
+      }
+    }
+  },
+  "by_threshold": {
+    "0.04": {
+      "glenn": {
+        "precision": 34.956874665166474,
+        "recall": 38.66442197605812,
+        "f1": 36.717242939706615,
+        "TP": 689,
+        "FP": 1282,
+        "FN": 1093,
+        "total_predicted": 1971,
+        "count_error": 189,
+        "count_accuracy": 89.39393939393939,
+        "threshold": 0.04,
+        "dataset": "glenn"
+      }
+    },
+    "0.05": {
+      "glenn": {
+        "precision": 46.62638464589488,
+        "recall": 25.982042634129044,
+        "f1": 33.36932338739873,
+        "TP": 463,
+        "FP": 530,
+        "FN": 1319,
+        "total_predicted": 993,
+        "count_error": 789,
+        "count_accuracy": 55.72390572390573,
+        "threshold": 0.05,
+        "dataset": "glenn"
+      }
+    },
+    "0.06": {
+      "glenn": {
+        "precision": 56.140350767757596,
+        "recall": 16.16161615254679,
+        "f1": 25.098004481059554,
+        "TP": 288,
+        "FP": 225,
+        "FN": 1494,
+        "total_predicted": 513,
+        "count_error": 1269,
+        "count_accuracy": 28.787878787878785,
+        "threshold": 0.06,
+        "dataset": "glenn"
+      }
+    },
+    "0.20": {
+      "walnut_research": {
+        "precision": 40.99009896931673,
+        "recall": 28.81002085677799,
+        "f1": 33.83730335433475,
+        "TP": 414,
+        "FP": 596,
+        "FN": 1023,
+        "total_predicted": 1010,
+        "count_error": 523,
+        "count_accuracy": -7.392197125256672,
+        "threshold": 0.2,
+        "dataset": "walnut_research"
+      }
+    },
+    "0.38": {
+      "glenn": {
+        "precision": 32.9055911856528,
+        "recall": 40.291806935863185,
+        "f1": 36.22598479969208,
+        "TP": 718,
+        "FP": 1464,
+        "FN": 1064,
+        "total_predicted": 2182,
+        "count_error": 400,
+        "count_accuracy": 77.55331088664423,
+        "threshold": 0.38,
+        "dataset": "glenn"
+      }
+    },
+    "0.42": {
+      "glenn": {
+        "precision": 37.26602380189108,
+        "recall": 36.86868684799737,
+        "f1": 37.066240530662384,
+        "TP": 657,
+        "FP": 1106,
+        "FN": 1125,
+        "total_predicted": 1763,
+        "count_error": 19,
+        "count_accuracy": 98.9337822671156,
+        "threshold": 0.42,
+        "dataset": "glenn"
+      }
+    },
+    "0.43": {
+      "glenn": {
+        "precision": 38.50782187815413,
+        "recall": 35.91470256121509,
+        "f1": 37.166035985760196,
+        "TP": 640,
+        "FP": 1022,
+        "FN": 1142,
+        "total_predicted": 1662,
+        "count_error": 120,
+        "count_accuracy": 93.26599326599326,
+        "threshold": 0.43,
+        "dataset": "glenn"
+      }
+    },
+    "0.45": {
+      "glenn": {
+        "precision": 40.231449938576276,
+        "recall": 33.164983146372066,
+        "f1": 36.357994120041546,
+        "TP": 591,
+        "FP": 878,
+        "FN": 1191,
+        "total_predicted": 1469,
+        "count_error": 313,
+        "count_accuracy": 82.4354657687991,
+        "threshold": 0.45,
+        "dataset": "glenn"
+      }
+    },
+    "0.50": {
+      "walnut_research": {
+        "precision": 41.44927530224743,
+        "recall": 58.72689926339446,
+        "f1": 48.598082245926484,
+        "TP": 286,
+        "FP": 404,
+        "FN": 201,
+        "total_predicted": 690,
+        "count_error": 203,
+        "count_accuracy": 58.31622176591375,
+        "threshold": 0.5,
+        "dataset": "walnut_research"
+      }
+    },
+    "0.60": {
+      "walnut_research": {
+        "precision": 52.495009875259456,
+        "recall": 54.00410666528931,
+        "f1": 53.238816299076596,
+        "TP": 263,
+        "FP": 238,
+        "FN": 224,
+        "total_predicted": 501,
+        "count_error": 14,
+        "count_accuracy": 97.1252566735113,
+        "threshold": 0.6,
+        "dataset": "walnut_research"
+      }
+    },
+    "0.70": {
+      "walnut_research": {
+        "precision": 61.558441398549505,
+        "recall": 48.66529764134436,
+        "f1": 54.35774872463652,
+        "TP": 237,
+        "FP": 148,
+        "FN": 250,
+        "total_predicted": 385,
+        "count_error": 102,
+        "count_accuracy": 79.05544147843942,
+        "threshold": 0.7,
+        "dataset": "walnut_research"
+      }
+    },
+    "0.80": {
+      "walnut_research": {
+        "precision": 73.87387354110868,
+        "recall": 33.67556461257584,
+        "f1": 46.26229818039689,
+        "TP": 164,
+        "FP": 58,
+        "FN": 323,
+        "total_predicted": 222,
+        "count_error": 265,
+        "count_accuracy": 45.58521560574948,
+        "threshold": 0.8,
+        "dataset": "walnut_research"
+      }
+    }
+  },
+  "by_dataset": {
+    "glenn": {
+      "0.06": {
+        "precision": 56.140350767757596,
+        "recall": 16.16161615254679,
+        "f1": 25.098004481059554,
+        "TP": 288,
+        "FP": 225,
+        "FN": 1494,
+        "total_predicted": 513,
+        "count_error": 1269,
+        "count_accuracy": 28.787878787878785,
+        "threshold": 0.06,
+        "dataset": "glenn"
+      },
+      "0.38": {
+        "precision": 32.9055911856528,
+        "recall": 40.291806935863185,
+        "f1": 36.22598479969208,
+        "TP": 718,
+        "FP": 1464,
+        "FN": 1064,
+        "total_predicted": 2182,
+        "count_error": 400,
+        "count_accuracy": 77.55331088664423,
+        "threshold": 0.38,
+        "dataset": "glenn"
+      },
+      "0.04": {
+        "precision": 34.956874665166474,
+        "recall": 38.66442197605812,
+        "f1": 36.717242939706615,
+        "TP": 689,
+        "FP": 1282,
+        "FN": 1093,
+        "total_predicted": 1971,
+        "count_error": 189,
+        "count_accuracy": 89.39393939393939,
+        "threshold": 0.04,
+        "dataset": "glenn"
+      },
+      "0.05": {
+        "precision": 46.62638464589488,
+        "recall": 25.982042634129044,
+        "f1": 33.36932338739873,
+        "TP": 463,
+        "FP": 530,
+        "FN": 1319,
+        "total_predicted": 993,
+        "count_error": 789,
+        "count_accuracy": 55.72390572390573,
+        "threshold": 0.05,
+        "dataset": "glenn"
+      },
+      "0.43": {
+        "precision": 38.50782187815413,
+        "recall": 35.91470256121509,
+        "f1": 37.166035985760196,
+        "TP": 640,
+        "FP": 1022,
+        "FN": 1142,
+        "total_predicted": 1662,
+        "count_error": 120,
+        "count_accuracy": 93.26599326599326,
+        "threshold": 0.43,
+        "dataset": "glenn"
+      },
+      "0.45": {
+        "precision": 40.231449938576276,
+        "recall": 33.164983146372066,
+        "f1": 36.357994120041546,
+        "TP": 591,
+        "FP": 878,
+        "FN": 1191,
+        "total_predicted": 1469,
+        "count_error": 313,
+        "count_accuracy": 82.4354657687991,
+        "threshold": 0.45,
+        "dataset": "glenn"
+      },
+      "0.42": {
+        "precision": 37.26602380189108,
+        "recall": 36.86868684799737,
+        "f1": 37.066240530662384,
+        "TP": 657,
+        "FP": 1106,
+        "FN": 1125,
+        "total_predicted": 1763,
+        "count_error": 19,
+        "count_accuracy": 98.9337822671156,
+        "threshold": 0.42,
+        "dataset": "glenn"
+      }
+    },
+    "walnut_research": {
+      "0.60": {
+        "precision": 52.495009875259456,
+        "recall": 54.00410666528931,
+        "f1": 53.238816299076596,
+        "TP": 263,
+        "FP": 238,
+        "FN": 224,
+        "total_predicted": 501,
+        "count_error": 14,
+        "count_accuracy": 97.1252566735113,
+        "threshold": 0.6,
+        "dataset": "walnut_research"
+      },
+      "0.50": {
+        "precision": 41.44927530224743,
+        "recall": 58.72689926339446,
+        "f1": 48.598082245926484,
+        "TP": 286,
+        "FP": 404,
+        "FN": 201,
+        "total_predicted": 690,
+        "count_error": 203,
+        "count_accuracy": 58.31622176591375,
+        "threshold": 0.5,
+        "dataset": "walnut_research"
+      },
+      "0.80": {
+        "precision": 73.87387354110868,
+        "recall": 33.67556461257584,
+        "f1": 46.26229818039689,
+        "TP": 164,
+        "FP": 58,
+        "FN": 323,
+        "total_predicted": 222,
+        "count_error": 265,
+        "count_accuracy": 45.58521560574948,
+        "threshold": 0.8,
+        "dataset": "walnut_research"
+      },
+      "0.70": {
+        "precision": 61.558441398549505,
+        "recall": 48.66529764134436,
+        "f1": 54.35774872463652,
+        "TP": 237,
+        "FP": 148,
+        "FN": 250,
+        "total_predicted": 385,
+        "count_error": 102,
+        "count_accuracy": 79.05544147843942,
+        "threshold": 0.7,
+        "dataset": "walnut_research"
+      },
+      "0.20": {
+        "precision": 40.99009896931673,
+        "recall": 28.81002085677799,
+        "f1": 33.83730335433475,
+        "TP": 414,
+        "FP": 596,
+        "FN": 1023,
+        "total_predicted": 1010,
+        "count_error": 523,
+        "count_accuracy": -7.392197125256672,
+        "threshold": 0.2,
+        "dataset": "walnut_research"
+      }
+    }
+  }
+}

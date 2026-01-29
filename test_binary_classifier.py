@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Test Binary Walnut Classifier on Test Dataset
-============================================
+Test the trained binary walnut classifier on a test image directory: sliding-window detection with configurable
+patch size, stride, and threshold. Compares predicted counts to ground-truth annotations and reports MAE, RMSE,
+R², precision, recall, F1. Can save detection overlays and JSON.
 
-Tests the trained binary classifier model on the test dataset using sliding window approach
-with configurable patch size, stride, and threshold parameters.
+How to run:
+  python test_binary_classifier.py --model path/to/model.pth --test_dir path/to/test/images [--output path/to/output] [--patch_size 32] [--stride 16] [--threshold 0.5]
 
-Author: Walnut Counting Project
-Date: 2025
+Use --help for all options. Annotations are expected in a sibling annotations/ directory or as specified.
 """
 
 import os

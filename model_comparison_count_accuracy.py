@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Compare models based on total count accuracy and precision"""
+"""
+Load detector evaluation results for thresholds 0.5–0.8 (from detector_evaluation_results_new and detector_evaluation_results_new_th*),
+compute count accuracy and print a comparison table (predicted, count accuracy, precision, recall, F1, TP/FP/FN).
+
+How to run:
+  python model_comparison_count_accuracy.py
+
+Expects detector_evaluation_results_new/ and detector_evaluation_results_new_th06/th07/th08/ with summary.json and per_image_metrics.json. Ground truth total is set in script.
+"""
 
 import json
 from pathlib import Path

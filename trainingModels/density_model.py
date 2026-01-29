@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
 """
-Density Estimation Model (MPS/Mac-friendly, Fast Mode)
-=====================================================
+Density estimation model: multi-scale CNN for patch-wise walnut density (count) prediction. MPS/Apple Silicon
+friendly; fast mode with slimmer net. Same architecture as synthetic_pipeline_code/density_model.py.
+Defines MultiScaleDensityNet, ModelConfig, MultiChannelTransform; can be run to train.
 
-Multiscale CNN model for walnut density estimation based on patch-wise counting.
-- Apple Silicon (MPS) optimized: mixed precision, channels_last, fewer workers
-- Fast mode: slimmer net, BN-free (GroupNorm), smaller defaults
-- Input pipeline caching to avoid per-epoch OpenCV cost
-- Safer Sobel normalization, controllable resize cap
-- Count-aware loss (absolute + relative) to prevent under-count shrinkage
+How to run (training):
+  python density_model.py --synthetic_data path/to/data [--output path] [--epochs 50]
 
-Author: Walnut Counting Project (revamped)
-Date: 2025
+Use as module: from density_model import MultiScaleDensityNet, ModelConfig, MultiChannelTransform.
+Run from project root or trainingModels/ with PYTHONPATH set if needed.
 """
 
 import os

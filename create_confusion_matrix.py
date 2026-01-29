@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """
-Create Confusion Matrix for Binary Classifier
-============================================
+Create a confusion matrix and classification metrics from binary classifier (detector) results. Uses per-image
+predicted vs true counts binned into count ranges (e.g. Low/Medium/High). Saves confusion matrix plot and metrics.
 
-Generates confusion matrix and classification metrics for binary classifier results.
+How to run:
+  python create_confusion_matrix.py
+
+Results file and output_dir are set inside create_confusion_matrix_from_results(); typically reads a JSON with per_image_results (pred_count, true_count).
 """
 
 import json

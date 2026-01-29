@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-Binary Walnut Classifier
-========================
+Train the binary walnut classifier (CNN) on positive/negative patches. Same role as root binary_classifier.py;
+optimized for MPS/Apple Silicon. Reads positive/ and negative/ dirs, saves model and metrics.
 
-CNN model for binary classification of walnut vs background patches.
-Optimized for MPS/Apple Silicon with efficient training and inference.
+How to run:
+  python binary_classifier.py --positive_dir positive --negative_dir negative [--output_dir models] [--epochs 50]
 
-Author: Walnut Counting Project
-Date: 2025
+Use --help for all options. Run from project root or trainingModels/ with paths adjusted.
 """
 
 import os

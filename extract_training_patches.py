@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """
-Extract 32x32 patches from training images for binary classifier training.
+Extract 32x32 patches from annotated images for binary classifier training. Positives: patches centered on
+annotation points. Negatives: patches from background (excluding areas near walnuts via poison-disc mask).
+Writes positive/ and negative/ image directories.
 
-Positives: Cropped walnuts (32x32 px centered on annotations)
-Negatives: 32x32 px patches from areas without walnuts (using poison discs to mask walnuts)
+How to run:
+  python extract_training_patches.py --images_dir path/to/images --annotations_dir path/to/annotations --output_dir path/to/output [--patch_size 32] [--num_negatives_per_image N]
+
+Use --help for all options.
 """
 
 import os

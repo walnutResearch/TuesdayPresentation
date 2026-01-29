@@ -1,29 +1,13 @@
 #!/usr/bin/env python3
 """
-Walnut Detector
-===============
+Walnut Detector: sliding-window detector using a trained binary classifier to detect and count walnuts in full images.
+Extracts overlapping patches, runs the classifier, builds a confidence map, finds peaks, and clusters with DBSCAN.
+Can be used as a library (WalnutDetector class) or from the CLI to process an image directory and save overlays/JSON.
 
-Sliding window detector using trained binary classifier for walnut detection.
-Applies the trained model to full images to detect and count walnuts.
+How to run (CLI):
+  python walnut_detector.py --model_path models_new/walnut_classifier.pth --image_dir path/to/images --output_dir path/to/output [--threshold 0.6] [--patch_size 32] [--stride 16] [--cluster]
 
-Author: Walnut Counting Project
-Date: 2025
-
-BEST MODEL CONFIGURATION (Threshold 0.6):
-========================================
-Model: models_new/walnut_classifier.pth
-Threshold: 0.6
-Patch Size: 32
-Stride: 16
-Clustering: True (DBSCAN)
-
-Performance Metrics:
-- Count Accuracy: 97.13% (501 predicted vs 487 ground truth, error: 14)
-- Precision: 52.50%
-- Recall: 54.00%
-- F1 Score: 53.24%
-
-This configuration provides the best balance between count accuracy and precision.
+Recommended: threshold 0.6 (or 0.5 for best count accuracy), patch_size 32, stride 16, --cluster.
 """
 
 import os
@@ -88,7 +72,15 @@ class WalnutDetector:
             checkpoint = torch.load(model_path, map_location=self.device)
         except Exception:
             checkpoint = torch.load(model_path, map_location=self.device, weights_only=False)
-        model.load_state_dict(checkpoint['model_state_dict'])
+        
+        # Handle different checkpoint formats
+        if 'model_state_dict' in checkpoint:
+            model.load_state_dict(checkpoint['model_state_dict'])
+        elif 'state_dict' in checkpoint:
+            model.load_state_dict(checkpoint['state_dict'])
+        else:
+            # Assume the checkpoint is the state dict itself
+            model.load_state_dict(checkpoint)
         
         print(f"📦 Loaded model from {model_path}")
         val_acc = checkpoint.get('val_acc', None)

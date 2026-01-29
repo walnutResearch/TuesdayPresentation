@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-Test Density Model on Test Dataset
-=================================
+Test the trained density estimation model on a test image directory: loads model, runs patch-based density
+prediction, sums to get per-image count, and compares to ground truth. Reports MAE, RMSE, correlation, etc.
 
-Tests the trained density model on the test dataset and provides comprehensive evaluation metrics.
-Uses the same model architecture and transforms as the training code.
+How to run:
+  python test_density_model.py --model path/to/density_model.pth --test_dir path/to/test [--output path] [--patch_size 32]
 
-Author: Walnut Counting Project
-Date: 2025
+Use --help for all options. Expects annotations in a sibling annotations/ or as specified.
 """
 
 import os
