@@ -8,6 +8,16 @@ How to run (CLI):
   python walnut_detector.py --model_path models_new/walnut_classifier.pth --image_dir path/to/images --output_dir path/to/output [--threshold 0.6] [--patch_size 32] [--stride 16] [--cluster]
 
 Recommended: threshold 0.6 (or 0.5 for best count accuracy), patch_size 32, stride 16, --cluster.
+
+# Basic training with class weights (automatic)
+python binary_classifier.py --dataset_dir ./data --epochs 50
+
+# Training + hard negative mining
+python binary_classifier.py --dataset_dir ./data --epochs 50 --mine_hard_negatives --hard_negative_threshold 0.6
+
+# With hard negative duplication for oversampling
+python binary_classifier.py --dataset_dir ./data --mine_hard_negatives --hard_negative_duplicate 3
+
 """
 
 import os
@@ -34,12 +44,12 @@ class WalnutDetector:
         self.stride = stride
         self.confidence_threshold = confidence_threshold
         
-        # Device selection
+        # Device selection - prioritize CUDA
         if device == 'auto':
-            if torch.backends.mps.is_available():
-                self.device = 'mps'
-            elif torch.cuda.is_available():
+            if torch.cuda.is_available():
                 self.device = 'cuda'
+            elif torch.backends.mps.is_available():
+                self.device = 'mps'
             else:
                 self.device = 'cpu'
         else:
