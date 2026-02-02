@@ -415,11 +415,11 @@ def main():
     # Create real data loaders
     train_loader, val_loader = create_real_data_loaders(args.real_data, config)
     
-    # Create fine-tuner - prioritize MPS for Apple Silicon, then CUDA, then CPU
-    if torch.backends.mps.is_available():
-        device = 'mps'
-    elif torch.cuda.is_available():
+    # Device selection - prioritize CUDA
+    if torch.cuda.is_available():
         device = 'cuda'
+    elif torch.backends.mps.is_available():
+        device = 'mps'
     else:
         device = 'cpu'
     print(f"🖥️  Using device: {device}")

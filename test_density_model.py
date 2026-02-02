@@ -546,11 +546,11 @@ def test_density_model(model_path: str, test_dir: str, output_dir: str = "./dens
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
     
-    # Device selection
-    if torch.backends.mps.is_available():
-        device = "mps"
-    elif torch.cuda.is_available():
+    # Device selection - prioritize CUDA
+    if torch.cuda.is_available():
         device = "cuda"
+    elif torch.backends.mps.is_available():
+        device = "mps"
     else:
         device = "cpu"
     print(f"🖥️  Using device: {device}")
